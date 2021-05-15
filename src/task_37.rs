@@ -58,7 +58,7 @@ impl Solution {
         let y_start = (y/3)*3;
         for i in x_start .. x_start + 3  {
             for j in y_start .. y_start + 3 {
-                if board[i][j] == new_item && i != x && j != y {
+                if board[i][j] == new_item && !(i == x && j == y) {
                     return false
                 }
             }
